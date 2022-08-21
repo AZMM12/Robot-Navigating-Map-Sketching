@@ -13,7 +13,53 @@ Simulating a Robot on a map to recognize the map and sketch it then printing it 
 1. Open Virtual box .
 2. Start Ubuntu .
 3. Clean catkin_ws and Type commands in "Turtlebot3.txt" to the terminal of ubuntu to Download pakages of turtlebot3 .
-4. because im using 20.04 ubuntu change every "kinetic" with "noetic".
+
+=== Part 1:Navigating the robot through the map
+....
+1. Open a New Terminal .
+2. Type : 
+export TURTLEBOT3_MODEL=burger
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+
+Now Gazebo will launch
+
+3. Open another terminal .
+4. Type :
+export TURTLEBOT3_MODEL=burger
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+5. Now you can navigate using  W = Forward , S = Stop , D = Right , A = Left .
+....
+=== Part 2:recognizing and sketching the map
+....
+1. Open a New Terminal .
+2. Type : 
+export TURTLEBOT3_MODEL=burger
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+
+Now Gazebo will launch
+
+3. Open another terminal .
+4. Type :
+export TURTLEBOT3_MODEL=burger
+roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping 
+
+Now Rviz will launch
+
+5. Open another terminal .
+6. Type :
+export TURTLEBOT3_MODEL=burger
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+7. Now you can navigate using  W = Forward , S = Stop , D = Right , A = Left .
+8. Navigate through all the map untill you see the map picture on Rviz is clear .
+9. Open another terminal
+10. Type:
+rosrun map_server map_saver -f ~/map
+
+Now the map is saved 
+....
+
 
 === Folder structure
 
@@ -21,5 +67,6 @@ Simulating a Robot on a map to recognize the map and sketch it then printing it 
  ROS_Task_2
   └── README.adoc             => this file
   └── Turtlebot3.txt          => Commands to install file
-  └── Pictures                => picture of Simulation
+  └── Part 1 Pictures                => picture of Simulation
+  └── Part 2 Pictures                => picture of Simulation
 ....
