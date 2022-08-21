@@ -65,8 +65,9 @@ Now the map is saved
 
 ....
  ROS_Task_2
-  └── README.adoc             => this file
-  └── Turtlebot3.txt          => Commands to install file
+  └── README.adoc                    => this file
+  └── Turtlebot3.txt                 => Commands to install file
   └── Part 1 Pictures                => picture of Simulation
   └── Part 2 Pictures                => picture of Simulation
+  └── Printed Map Files              => picture of Simulation
 ....
