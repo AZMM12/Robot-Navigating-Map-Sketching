@@ -1,0 +1,14 @@
+to install turtlebot3:
+
+1. sudo apt-get update
+2. sudo apt-get upgrade
+3. cd ~/catkin_ws/src/
+4. git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git -b noetic-devel
+5. git clone https://github.com/ROBOTIS-GIT/turtlebot3.git -b noetic-devel
+6. cd ~/catkin_ws && catkin_make
+7. cd ~/catkin_ws/src/
+8. git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+9. cd ~/catkin_ws && catkin_make
+
+in new terminal:
+roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
