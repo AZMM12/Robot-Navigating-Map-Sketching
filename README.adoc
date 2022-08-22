@@ -1,4 +1,4 @@
-= Project: {Robot-Navigating-Map-Sketching}
+= Project: {Robot-Navigation-and-Map-Sketching}
 
 === Author: azmm12.
 === Email: {Abdulazizmmutiri@gmail.com} .
